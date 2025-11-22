@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheng Zhou - Resume</title>
+    <style>
+        :root {
+            --primary-color: #263238; /* Dark slate */
+            --secondary-color: #546e7a; /* Medium slate for subheaders */
+            --accent-color: #0277bd; /* Blue for links and accents */
+            --text-color: #37474f; /* Main text color */
+            --bg-color: #f5f5f5; /* Light gray background */
+            --container-bg: #ffffff; /* White container */
+            --border-color: #eceff1;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            position: relative; /* Essential for positioning the button relative to the body */
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 4px;
+            padding-top: 80px; /* Added padding to make space for the download button */
+            position: relative; /* Ensure button doesn't affect its flow */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-top: -40px; /* Move header content up to visually align with previous layout */
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .separator {
+            margin: 0 8px;
+            color: #b0bec5;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+        }
+
+        .entry {
+            margin-bottom: 25px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .entry-title-group {
+            flex: 1;
+        }
+
+        .entry-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .entry-company {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .entry-location {
+            font-style: italic;
+            color: #78909c;
+        }
+
+        .entry-date {
+            font-weight: 600;
+            color: var(--accent-color);
+            text-align: right;
+            min-width: 180px;
+            margin-left: 20px;
+        }
+
+        ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .cert-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            border-bottom: 1px dotted var(--border-color);
+            padding-bottom: 4px;
+        }
+
+        /* Styles for the download button */
+        .download-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease;
+            position: absolute; /* Position relative to the body */
+            top: 20px; /* Distance from top of the viewport */
+            right: 20px; /* Distance from right of the viewport */
+            z-index: 1000; /* Ensure it stays on top of other content */
+        }
+
+        .download-button:hover {
+            background-color: #01579b; /* Darker shade of accent color */
+        }
+
+        @media (max-width: 768px) { /* Adjust button position for smaller screens */
+            .download-button {
+                position: static; /* Revert to static for flow */
+                display: block; /* Make it a block element */
+                width: fit-content; /* Fit content width */
+                margin: 0 auto 20px auto; /* Center it and add bottom margin */
+            }
+            body {
+                padding: 10px; /* Reduce overall body padding */
+            }
+            .resume-container {
+                padding: 20px; /* Reduce container padding */
+                padding-top: 20px; /* Reset top padding as button is static */
+            }
+            header {
+                margin-top: 0; /* Reset header margin */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="sheng_zhou_resume.pdf" download="sheng_zhou_resume.pdf" class="download-button">Download Resume (PDF)</a>
+
+    <div class="resume-container">
+
+        <header>
+            <h1>Sheng Zhou</h1>
+            <div class="contact-info">
+                Jason91748@gmail.com
+                <span class="separator">|</span> (626) 225-9139
+                <span class="separator">|</span> Diamond Bar, CA
+                <br>
+                LinkedIn: <a href="https://www.linkedin.com/in/shengzhou040/" target="_blank">https://www.linkedin.com/in/shengzhou040/</a>
+                <span class="separator">|</span>
+                GitHub: <a href="https://github.com/shz040" target="_blank">https://github.com/shz040</a>
+                <span class="separator">|</span>
+                CA Class C License
+            </div>
+        </header>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <p class="summary-text">Cloud Support Engineer (AWS) focused on collaboration platforms, secure data systems, and automated workflows that improve reliability and decisions.Skilled in SharePoint site/security admin, Power BI with DAX and scheduled refresh, Power Automate approvals/alerts, and SQL/MYSQL administration with transferable SQL Server/Oracle skills.Committed to least-privilege access, auditability, and safe handling of sensitive data.</p>
+            <p class="summary-text"></p>
+            <p class="summary-text"></p>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">Cloud Support Engineer</h3>
+                        <div class="entry-company">Amazon Web Services (AWS) <span class="entry-location">| Seattle, WA</span></div>
+                    </div>
+                    <div class="entry-date">December 2023 - September 2025</div>
+                </div>
+                <ul>
+                    <li>Resolved Aurora/MySQL/SQL and DMS via video/chat/phone/email, hitting 90% same-day resolution and 100% CSAT.</li>
+                    <li>Administered backups/restores, security and roles/privileges, and storage guardrails for Aurora/MySQL/SQL and DMS, meeting recovery and access audit requirements.</li>
+                    <li>Using EXPLAIN and plan analysis cut database latency and lock waits by redesigning indexes and rewriting queries; validated changes with Java/Python harnesses, reducing verification time by 70% and preventing regressions.</li>
+                    <li>Delivered Power BI dashboards with DAX and scheduled refresh, giving stakeholders self-service views of key metrics and saving 24 hours/month of manual reporting.</li>
+                    <li>Built Power Automate flows to convert intake to approvals to work orders using SharePoint Lists, with Teams alerts and full audit logs, reduced cycle time and improved SLA adherence.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">Data Scientist Intern</h3>
+                        <div class="entry-company">Thaddeus Resource Center (Non-Profit Organization) <span class="entry-location">| La Verne, CA</span></div>
+                    </div>
+                    <div class="entry-date">June 2022 - August 2022</div>
+                </div>
+                <ul>
+                    <li>Clean, extract, and combine data from multiple large databases, analyze key business questions, and deliver clear data insights and solutions.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">Customer Technical Support</h3>
+                        <div class="entry-company">Cricket Wireless Company <span class="entry-location">| Rowland Height, CA</span></div>
+                    </div>
+                    <div class="entry-date">November 2014 - January 2019</div>
+                </div>
+                <ul>
+                    <li>Provide tech support for devices and plans: set up networks/APN, Wi-Fi/hotspots, fix iOS/Android issues; diagnose connectivity and guide step-by-step to resolution.</li>
+                    <li>Met with 40+ customers weekly via phone and 1:1 meeting, assessed needs and resolved issues to improve satisfaction.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">MySQL Database Administrator(DBA)</h3>
+                        <div class="entry-company">Hengyi Software Development Company <span class="entry-location">| Shenzhen, China</span></div>
+                    </div>
+                    <div class="entry-date">June 2007 - August 2013</div>
+                </div>
+                <ul>
+                    <li>Experience of Database Administration, design, development, maintenance and production support of relational databases, business applications, new server setup, MySql Server installation, upgrade, migration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">Operations Analytics and Workflow Automation</h3>
+                    </div>
+                    <div class="entry-date">May 2022</div>
+                </div>
+                <ul>
+                    <li>Built Power BI dashboards for key metrics using DAX and set up row-level security and scheduled refresh.</li>
+                    <li>Created Power Automate flows that moved requests from intake to approval to work order using SharePoint Lists; sent Teams alerts and kept an audit log of each step.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">Deploying a Three-Tier Web Application on AWS</h3>
+                    </div>
+                    <div class="entry-date">July 2023</div>
+                </div>
+                <ul>
+                    <li>Designed three tiers: Frontend - static website, Middle - ALB, Auto-scaling, VPC, EC2, and Backend - S3, RDS.</li>
+                    <li>Implemented a WordPress environment leveraging EC2 for hosting, RDS for database, and EFS for scalable storage.</li>
+                    <li>Successfully deployed and ensured high availability, scalability, and optimized networking for seamless data flow.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">Bachelor of Science, Data Science</h3>
+                        <div class="entry-company">University of California San Diego</div>
+                    </div>
+                    <div class="entry-date">March 2024</div>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title-group">
+                        <h3 class="entry-title">Associate degree, Market Management</h3>
+                        <div class="entry-company">Shenzhen University</div>
+                    </div>
+                    <div class="entry-date">October 2005</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul class="cert-list">
+                <li>
+                    <span>AWS Certified Cloud Practitioner</span>
+                    <span class="entry-date" style="margin-left: auto; min-width: auto;">July 2023</span>
+                </li>
+                <li>
+                    <span>AWS Certified Solutions Architect - Associate</span>
+                    <span class="entry-date" style="margin-left: auto; min-width: auto;">August 2023</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Activities</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Python (Pandas, Scikit-learn), Java, JavaScript, SQL, R, Power BI</li>
+                        <li>Microsoft Office (Word, Excel, PowerPoint, Outlook etc.)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Other</h3>
+                    <ul>
+                        <li>Hobbies: basketball, traveling, music, etc.</li>
+                        <li>Language: Mandarin, Cantonese, English</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
